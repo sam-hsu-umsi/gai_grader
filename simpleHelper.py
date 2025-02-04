@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 import json
 import openai
-import openai
+#from openai import AzureOpenAI
 import os
 from dotenv import load_dotenv
 
@@ -353,7 +353,7 @@ class peerGPT:
             print('Unable to load .env file.')
             quit()
         #Create Azure client
-        client = openai.AzureOpenAI(
+        client = AzureOpenAI(
             api_key=os.environ['OPENAI_API_KEY'],  
             api_version=os.environ['OPENAI_API_VERSION'],
             azure_endpoint = os.environ['OPENAI_API_BASE'],
